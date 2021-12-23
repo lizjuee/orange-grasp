@@ -1,0 +1,19 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/qq44642754/Project/orange_ws/devel/include/**",
+        "/opt/ros/kinetic/include/**",
+        "/home/qq44642754/Project/orange_ws/src/grasp_demo/include/**",
+        "/home/qq44642754/Project/orange_ws/src/robot_voice/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}
