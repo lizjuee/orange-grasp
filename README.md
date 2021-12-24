@@ -1,18 +1,18 @@
 # orange-grasp
 通过Yolo识别出橙子的大小，然后用机械手抓取橙子
 
-# 开发环境：
+# develop environment：
 Ubuntu 16.04 + ros kinetic &&  Ubuntu 18.04 + ros melodic
 
-# 传感器：
+# sensor：
 
-深度摄像头
+intel realsense d435
 
-# 实验平台：
+# hardware：
 
-钛虎智能仿生手
+Ti5hand bionic arm
   
-#安装方法:
+# setup:
 ```
 $mkdir your_ws
      
@@ -28,34 +28,34 @@ $catkin_make
 ```
 
 
-# 运行机械手:
+# run bionic arm:
 
-## 1.将U盘插入工控机或者开发板上:
+## 1.connect serial port to control unit:
 ```
 $cd /dev && ls
 ```
-#### 注： 当看到有ttyUSBx开头的设备时，代表机械手的串口已连接
-## 2.运行moveHand service程序:
+#### ps： when saw ttyUSBx equipments，it means the bionic arm is connected
+## 2.run "moveHand service" program:
 ```
 $rosrun serial_test move_hand_service.py
 ```
 
-## 3.启动语音程序
+## 3.launch speech program
 ```
 $roslaunch robot_voice robot_voice.launch
 ```
 
-## 3.启动YOLOV3
+## 3.launch YOLOV3
 ```
 $roslaunch darknet_ros darknet_ros-orange.launch
 ```
 
-## 4. 启动获取橙子大小节点
+## 4. launch node of get width of orange
 ```
 $rosrun grasp_demo get_width
 ```
 
-## 5. 启动橙子抓取
+## 5. launch orange grasp
 ```
 $rosrun grasp_demo orange_grasp.py
 ```
