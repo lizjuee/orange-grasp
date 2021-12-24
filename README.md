@@ -1,5 +1,5 @@
 # orange-grasp
-通过Yolo识别出橙子的大小，然后用机械手抓取橙子
+identify the width of orange use Yolo, then use bionic arm to grasp it
 
 # develop environment：
 Ubuntu 16.04 + ros kinetic &&  Ubuntu 18.04 + ros melodic
