@@ -20,7 +20,7 @@ $cd your_ws/
      
 $mkdir src && cd src/
      
-$git clone https://github.com/qq44642754a/orange-grasp.git
+$git clone https://github.com/lizjuee/orange-grasp.git
      
 $cd ..
      
