@@ -1,5 +1,6 @@
 # orange-grasp
 identify the width of orange use Yolo, then use bionic arm to grasp it
+https://github.com/lizjuee/orange-grasp/blob/master/picture/2.jpg
 
 # develop environment：
 Ubuntu 16.04 + ros kinetic &&  Ubuntu 18.04 + ros melodic
