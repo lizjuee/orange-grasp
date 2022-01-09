@@ -2,7 +2,7 @@
 identify the width of orange use Yolo, then use bionic arm to grasp it
 
 # develop environment：
- && Jetson Nano
+Jetson Nano
 
 # sensor：
 
@@ -20,7 +20,7 @@ $cd your_ws/
      
 $mkdir src && cd src/
      
-$git clone https://github.com/lizjuee/orange-grasp.git
+$git clone git@github.com:lizjuee/orange-grasp.git
      
 $cd ..
      
@@ -30,34 +30,26 @@ $catkin_make
 
 # run bionic arm:
 
-## 1.connect serial port to control unit:
+## 1.launchRealsense
 ```
-$cd /dev && ls
-```
-#### ps： when saw ttyUSBx equipments，it means the bionic arm is connected
-## 2.run "moveHand service" program:
-```
-$rosrun serial_test move_hand_service.py
+$roslaunch realsense2_camera rs_rgbd.launch
 ```
 
-## 3.launch speech program
+## 2.launch YOLOV3
 ```
-$roslaunch robot_voice robot_voice.launch
-```
-
-## 3.launch YOLOV3
-```
-$roslaunch darknet_ros darknet_ros-orange.launch
+$cd test_ws/ && source devel/setup.bash
+$roslaunch darknet_ros darknet_ros.launch
 ```
 
-## 4. launch node of get width of orange
+## 3. launch node of get columen of orange
 ```
-$rosrun grasp_demo get_width
+$cd your_ws/ && source devel/setup.bash
+$rosrun grasp_demo get_volumen
 ```
 
-## 5. launch orange grasp
+## 4. subscribe thr topic about volumen
 ```
-$rosrun grasp_demo orange_grasp.py
+$rostopic echo /volumen
 ```
 
 
